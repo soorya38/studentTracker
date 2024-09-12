@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ccc;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "profile time-table"
+        "academics side-options";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 1vh;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+}
+
+.profile {
+    grid-area: profile;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.time-table {
+    grid-area: time-table;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.academics {
+    grid-area: academics;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.side-options {
+    grid-area: side-options;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.side-options > button {
+    padding: 5px;
+    width: 45%;
+    margin-bottom: 20px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.side-options button:hover {
+    background-color: #bbb;
+}
