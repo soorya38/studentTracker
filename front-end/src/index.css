@@ -45,7 +45,6 @@ body {
     margin: 0 auto 20px;
 }
 
-/* Time Table and Academics Sections */
 .time-table,
 .academics {
     background-color: #f8f8f8;
@@ -57,29 +56,28 @@ body {
     text-align: center;
 }
 
-/* Side Options Section */
 .side-options {
     grid-area: side-options;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Add gap between buttons */
+    gap: 20px; 
     background-color: #f8f8f8;
     padding: 20px;
     border-radius: 10px;
 }
 
-.side-options > button {
-    flex: 1 1 45%; /* Allow buttons to grow/shrink */
-    padding: 10px; /* Adjust padding for better clickability */
+.side-options , button {
+    flex: 1 1 45%;
+    padding: 10px;
     background-color: #ccc;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease;
 }
 
-.side-options > button:hover {
+.side-options , button:hover {
     background-color: #bbb;
 }
 
@@ -88,14 +86,12 @@ body {
     color: white; 
 }
 
-/* Attendance Container */
 .attendance-container {
     display: flex;
     justify-content: center;
-    padding: 5vh; /* Adjust padding for better spacing */
+    padding: 5vh;
 }
 
-/* Contents Panel */
 .contents-panel {
     width: 350px;
     height: 75vh;
@@ -103,16 +99,15 @@ body {
     margin-right: 50px;
     padding: 20px;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .contents-panel h3 {
     margin: 50px 0 10vh;
 }
 
-/* Button Styles */
 button {
-    font-size: 1.5rem; /* Use rem for better scalability */
+    font-size: 1.5rem;
     padding: 10px 5px;
     border: none;
     border-radius: 5px;
@@ -120,7 +115,6 @@ button {
     transition: background-color 0.3s ease;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .container {
         grid-template-areas:
@@ -132,7 +126,27 @@ button {
         grid-template-rows: auto;
     }
 
-    .side-options > button {
-        width: 100%; /* Full width buttons on small screens */
+    .side-options , button {
+        width: 100%; 
     }
+}
+
+.outer-todo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.todo-list-item {
+    padding: 10px;
+    font-size: 150%;
+    background-color: green;
+    margin-top: 10px;
+}
+
+.todo-list {
+    list-style-type: none;
+}
+
+.todo-list-item-btn {
+    margin-left: 150px;
 }

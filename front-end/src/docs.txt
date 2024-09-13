@@ -18,3 +18,11 @@ ContentsPanel:
     props:
         workingDays(Number)
         absentDays(Number)
+
+Todo:
+    components:
+        Task
+    
+Task:
+    props:
+        title(string)
