@@ -1,0 +1,33 @@
+<!-- weaknesses.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weaknesses</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Areas of Weakness</h1>
+  </header>
+
+  <div id="weaknesses-container">
+    <!-- Weaknesses will be dynamically inserted here -->
+  </div>
+
+  <script>
+    fetch('https://api.school.com/student/123/weaknesses')
+      .then(response => response.json())
+      .then(weaknesses => {
+        const weaknessesContainer = document.getElementById('weaknesses-container');
+        weaknesses.forEach(weakness => {
+          const weaknessElement = document.createElement('div');
+          weaknessElement.className = 'weakness-item';
+          weaknessElement.innerHTML = `<h3>${weakness.title}</h3><p>${weakness.details}</p>`;
+          weaknessesContainer.appendChild(weaknessElement);
+        });
+      });
+  </script>
+</body>
+</html>

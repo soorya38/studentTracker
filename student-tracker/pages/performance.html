@@ -1,0 +1,44 @@
+<!-- performance.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Performance</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Load Chart.js for performance graph -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Academic Performance</h1>
+  </header>
+
+  <div class="container">
+    <canvas id="performanceChart"></canvas>
+    <script>
+      // Fetch student data and render dynamically using Chart.js
+      const ctx = document.getElementById('performanceChart').getContext('2d');
+      const performanceChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Math', 'Science', 'History'],
+          datasets: [{
+            label: 'Term 1 Marks',
+            data: [85, 92, 78],
+            backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)']
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- ranking.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Student Ranking</h1>
+  </header>
+
+  <div id="ranking-container">
+    <!-- Ranking details will be populated dynamically here -->
+  </div>
+
+  <script>
+    // Fetch rankings from backend
+    fetch('https://api.school.com/student/123/ranking')
+      .then(response => response.json())
+      .then(rankData => {
+        const rankingContainer = document.getElementById('ranking-container');
+        rankData.forEach(rank => {
+          const rankElement = document.createElement('p');
+          rankElement.textContent = `Subject: ${rank.subject}, Rank: ${rank.rank}`;
+          rankingContainer.appendChild(rankElement);
+        });
+      });
+  </script>
+</body>
+</html>
