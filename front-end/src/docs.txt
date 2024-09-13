@@ -1,0 +1,20 @@
+libraries:
+    react-multi-date-picker
+
+ParentsDashboard:
+    components:
+        Attendace
+        Profile
+        TimeTable
+        Academics
+        SideBar
+
+Attendace:
+    components:
+        Calendar
+        ContentsPanel
+
+ContentsPanel:
+    props:
+        workingDays(Number)
+        absentDays(Number)

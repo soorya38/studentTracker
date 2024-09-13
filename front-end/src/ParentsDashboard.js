@@ -1,21 +1,23 @@
+import Attendace from './Attendance';
 
 const ParentsDashboard = () => {
     return (
         <div class="container">
-            <Profile />
+            {/* <Attendace /> */}
+            {/* <Profile />
             <TimeTable />
             <Academics />
-            <SideBar />
+            <SideBar /> */}
         </div>
     );
 }
 
 const Profile = () => {
     return (
-<div class="profile">
-                <div class="profile-pic"></div>
-                <p>Profile Details</p>
-            </div>
+        <div class="profile">
+            <div class="profile-pic"></div>
+            <p>Profile Details</p>
+        </div>
     );
 }
 
