@@ -150,3 +150,7 @@ button {
 .todo-list-item-btn {
     margin-left: 150px;
 }
+
+.project-completion {
+    text-align: center;
+}

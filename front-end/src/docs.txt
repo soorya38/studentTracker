@@ -1,5 +1,8 @@
 libraries:
     react-multi-date-picker
+    react-calendar-heatmap/dist/styles.css
+    react-calendar-heatmap
+    react-gauges
 
 ParentsDashboard:
     components:
