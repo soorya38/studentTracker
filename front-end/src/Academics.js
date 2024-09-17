@@ -1,7 +1,8 @@
 import { BarChart } from "@mui/x-charts";
+import { SimpleGauge } from "react-gauges";
+import { PieChart } from '@mui/x-charts/PieChart';
 import CalendarHeatmap from 'react-calendar-heatmap';
 import 'react-calendar-heatmap/dist/styles.css';
-import { SimpleGauge } from "react-gauges";
 
 const subjects = ['maths', 'chemistry', 'physics', 'cs', 'bio'];
 const marks = [8, 5, 9, 10, 7];
@@ -13,8 +14,7 @@ const Academics = () => {
             <MarkRepresentation />
             <ProjectCompletion />
             <Submissions />
-            
-            <p>Extra Curricular Activities</p>
+            <ExtraCurricularActivites />
         </>
     );
 }
@@ -49,7 +49,7 @@ const ProjectCompletion = () => {
         <div className="project-completion" style={{ height: '200px', width: '300px' }}>
             <p>Project completion: </p>
             <div>
-                <SimpleGauge value={50} isTotal={true} />
+                <SimpleGauge value={completionValue} isTotal={true} />
             </div> 
         </div>
     );
@@ -64,11 +64,33 @@ const Submissions = () => {
             startDate={new Date('2023-12-31')}
             endDate={new Date('2024-04-01')}
             values={[
-                { date: '2024-01-01', count: 12 },
-                { date: '2024-01-22', count: 122 },
-                { date: '2024-01-30', count: 38 },
-                { date: '2024-03-30', count: 38 },
+                { date: '2024-01-01', count: 1},
+                { date: '2024-01-22', count: 1},
+                { date: '2024-01-30', count: 1},
+                { date: '2024-03-30', count: 1},
             ]}
+            />
+        </div>
+    );
+}
+
+const PieData = [
+    { id: 0, value: 10, label: 'Games' },
+    { id: 1, value: 15, label: 'Academics' },
+    { id: 2, value: 20, label: 'Travel' },
+];
+const ExtraCurricularActivites = () => {
+    return (
+        <div className="extra-curricular-activities">
+            <p>Extra curricular activites</p>
+            <PieChart
+            series={[
+                {
+                data: PieData,
+                },
+            ]}
+            width={400}
+            height={200}
             />
         </div>
     );

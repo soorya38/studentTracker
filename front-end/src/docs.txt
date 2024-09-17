@@ -3,6 +3,7 @@ libraries:
     react-calendar-heatmap/dist/styles.css
     react-calendar-heatmap
     react-gauges
+    react-native-horizontal-bar-graphs
 
 ParentsDashboard:
     components:
