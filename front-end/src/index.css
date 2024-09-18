@@ -165,3 +165,42 @@ button {
     text-align: left;
     margin-left: 100px;
 }
+
+
+.timetable-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 7px;
+}
+  
+table.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border-radius: 7px;
+}
+  
+table.timetable th, table.timetable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 7px;
+}
+  
+table.timetable th {
+    background-color: #1e90ff;
+    color: white;
+    border-radius: 7px;
+}
+  
+table.timetable td {
+    background-color: #f9f9f9;
+}
+  
+table.timetable td:hover {
+    background-color: #f1f1f1;
+}
+  
+table.timetable td:first-child {
+    background-color: #e3f2fd;
+    font-weight: bold;
+}

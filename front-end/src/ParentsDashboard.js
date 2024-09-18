@@ -16,11 +16,11 @@ const ParentsDashboard = () => {
     return (
         <div class="container">
             {/* <AttendacePage /> */}
-            <AcademicsPage />
-            {/* <Profile />
+            {/* <AcademicsPage /> */}
+            <Profile />
             <TimeTable />
             <Academics />
-            <SideBar /> */}
+            <SideBar />
         </div>
     );
 }
@@ -44,9 +44,60 @@ const Profile = () => {
 
 const TimeTable = () => {
     return (
-        <div class="time-table">
-            <p>Time Table:</p>
-        </div>
+        <table class="timetable">
+            <thead>
+                <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>09:00 - 10:00</td>
+                <td>Math</td>
+                <td>Physics</td>
+                <td>Chemistry</td>
+                <td>Math</td>
+                <td>English</td>
+                </tr>
+                <tr>
+                <td>10:00 - 11:00</td>
+                <td>English</td>
+                <td>Math</td>
+                <td>Physics</td>
+                <td>Chemistry</td>
+                <td>History</td>
+                </tr>
+                <tr>
+                <td>11:00 - 12:00</td>
+                <td>Break</td>
+                <td>Break</td>
+                <td>Break</td>
+                <td>Break</td>
+                <td>Break</td>
+                </tr>
+                <tr>
+                <td>12:00 - 01:00</td>
+                <td>History</td>
+                <td>Chemistry</td>
+                <td>English</td>
+                <td>Physics</td>
+                <td>Math</td>
+                </tr>
+                <tr>
+                <td>01:00 - 02:00</td>
+                <td>Physics</td>
+                <td>Math</td>
+                <td>English</td>
+                <td>History</td>
+                <td>Physics</td>
+                </tr>
+            </tbody>
+        </table>
     );
 }
 
