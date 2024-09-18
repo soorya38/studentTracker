@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+ParentsDashboard
+Components:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    AttendacePage: Displays student's attendance information.
+    Profile: Shows student's profile details like name, rankings, achievements, interests, and bio.
+    TimeTable: Displays the student's timetable.
+    Academics: Shows student's academic progress and extracurricular activities.
+    SideBar: Provides navigation options for different sections of the dashboard.
 
-## Available Scripts
+AttendacePage
+Components:
 
-In the project directory, you can run:
+    Calendar: A calendar component for showing attendance days.
+    ContentsPanel: Displays attendance summary.
 
-### `npm start`
+ContentsPanel Props:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    workingDays (Number): Total number of working days.
+    absentDays (Number): Total number of absent days.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Todo
+Components:
 
-### `npm test`
+    Task: Represents an individual task in the to-do list.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Task Props:
 
-### `npm run build`
+    title (String): The title of the task.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Profile
+Data (From Database):
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    profileDetails: Stores student's profile information.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Default Values:
 
-### `npm run eject`
+    name: 'mark1'
+    globalRanking: 1
+    classRanking: 1
+    achievements: 'none'
+    interests: 'none'
+    bio: 'none'
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Academics
+Components:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    MarkRepresentation: Displays the student's subject marks using a bar chart.
+    ProjectCompletion: Shows project completion status using a gauge chart.
+    Submissions: Displays project submission dates on a heatmap.
+    ExtraCurricularActivities: Shows extracurricular participation with a pie chart.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+MarkRepresentation Data (From Database):
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    subject: List of subjects.
+    marks: List of marks for each subject.
 
-## Learn More
+Default Values:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    subject: ['maths', 'chemistry', 'physics', 'cs', 'bio']
+    marks: [8, 5, 9, 10, 7]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ProjectCompletion Data (From Database):
 
-### Code Splitting
+    completionValue: The project completion percentage.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Default Values:
 
-### Analyzing the Bundle Size
+    completionValue: 10
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Submissions Data (From Database):
 
-### Making a Progressive Web App
+    projectSubmissionDates.dates: List of submission dates.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Default Values:
 
-### Advanced Configuration
+javascript
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+const projectSubmissionDates = {
+    dates: [
+        { date: '2024-01-01' },
+        { date: '2024-01-22' },
+        { date: '2024-01-30' },
+        { date: '2024-03-30' },
+    ],
+};
 
-### Deployment
+ExtraCurricularActivities Data (From Database):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    PieData: Data representing extracurricular activities breakdown.
 
-### `npm run build` fails to minify
+Default Values:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+javascript
+
+const PieData = [
+    { id: 0, value: 10, label: 'Games' },
+    { id: 1, value: 15, label: 'Academics' },
+    { id: 2, value: 20, label: 'Travel' },
+];
+
+Libraries Used:
+
+    react-multi-date-picker: For handling multiple date selections in calendars.
+    react-calendar-heatmap: For displaying heatmap-style calendars (e.g., for project submissions).
+    react-gauges: For displaying gauges (e.g., project completion).
+    react-native-horizontal-bar-graphs: For rendering horizontal bar charts.
