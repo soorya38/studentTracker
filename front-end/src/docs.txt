@@ -1,0 +1,91 @@
+libraries:
+    react-multi-date-picker
+    react-calendar-heatmap/dist/styles.css
+    react-calendar-heatmap
+    react-datetime-picker
+    react-gauges
+    react-native-horizontal-bar-graphs
+    import 'react-datetime-picker/dist/DateTimePicker.css';
+    import 'react-calendar/dist/Calendar.css';
+    import 'react-clock/dist/Clock.css';
+
+ParentsDashboard:
+    components:
+        AttendacePage
+        Profile
+        TimeTable
+        Academics
+        SideBar
+
+AttendacePage:
+    components:
+        Calendar
+        ContentsPanel
+
+ContentsPanel:
+    props:
+        workingDays(Number)
+        absentDays(Number)
+
+Todo:
+    components:
+        Task
+    
+Task:
+    props:
+        title(string)
+
+Profile:
+    data(db) -> profileDetails:
+    default values:
+        name: 'mark1',
+        globalRanking: 1,
+        classRanking: 1,
+        achievements: 'none',
+        intrests: 'none',
+        bio: 'none'
+
+
+Academics:
+    MarkRepresentation
+    ProjectCompletion
+    Submissions
+    ExtraCurricularActivites
+
+MarkRepresentation:
+    data(db) -> subject, marks
+    default values:
+        subject = ['maths', 'chemistry', 'physics', 'cs', 'bio']
+        marks = [8, 5, 9, 10, 7]
+    components:
+        BarChart
+
+ProjectCompletion:
+    data(db) -> completionValue
+    default values:
+        completionValue = 10
+    components:
+        SimpleGauge
+
+Submissions:
+    data(db) -> projectSubmissionDates.dates
+    default values:
+        const projectSubmissionDates = {dates: [
+            { date: '2024-01-01'},
+            { date: '2024-01-22'},
+            { date: '2024-01-30'},
+            { date: '2024-03-30'},
+        ]};
+    components:
+        CalendarHeatmap
+
+ExtraCurricularActivites:
+    data(db) -> PieData
+    default values:
+        const PieData = [
+            { id: 0, value: 10, label: 'Games' },
+            { id: 1, value: 15, label: 'Academics' },
+            { id: 2, value: 20, label: 'Travel' },
+        ];
+    components:
+        PieChart

@@ -1,0 +1,167 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ccc;
+    color: #333; /* Ensure text readability */
+}
+
+/* Container Layout */
+.container {
+    display: grid;
+    grid-template-areas: 
+        "profile time-table"
+        "academics side-options";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 1vh auto 0; /* Adjust top margin for spacing */
+    background-color: #e3e3e3;
+    border-radius: 10px;
+}
+
+/* Profile Section */
+.profile {
+    grid-area: profile;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.time-table,
+.academics {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.academics {
+    text-align: center;
+}
+
+.side-options {
+    grid-area: side-options;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.side-options , button {
+    flex: 1 1 45%;
+    padding: 10px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.side-options , button:hover {
+    background-color: #bbb;
+}
+
+.absent {
+    background-color: red;
+    color: white; 
+}
+
+.attendance-container {
+    display: flex;
+    justify-content: center;
+    padding: 5vh;
+}
+
+.contents-panel {
+    width: 800px;
+    height: 75vh;
+    border-radius: 7px;
+    margin-right: 50px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.contents-panel h3 {
+    margin: 50px 0 10vh;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "profile"
+            "time-table"
+            "academics"
+            "side-options";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .side-options , button {
+        width: 100%; 
+    }
+}
+
+.outer-todo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.todo-list-item {
+    padding: 10px;
+    font-size: 150%;
+    background-color: green;
+    margin-top: 10px;
+}
+
+.todo-list {
+    list-style-type: none;
+}
+
+.todo-list-item-btn {
+    margin-left: 150px;
+}
+
+.project-completion {
+    text-align: center;
+}
+
+.acad-ic {
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+
+.profile-details {
+    text-align: left;
+    margin-left: 100px;
+}
