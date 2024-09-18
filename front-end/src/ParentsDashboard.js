@@ -16,11 +16,11 @@ const ParentsDashboard = () => {
     return (
         <div class="container">
             {/* <AttendacePage /> */}
-            {/* <AcademicsPage /> */}
-            <Profile />
+            <AcademicsPage />
+            {/* <Profile />
             <TimeTable />
             <Academics />
-            <SideBar />
+            <SideBar /> */}
         </div>
     );
 }

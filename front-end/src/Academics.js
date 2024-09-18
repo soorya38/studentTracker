@@ -32,7 +32,7 @@ const Academics = () => {
 
 const MarkRepresentation = () => {
     return (
-        <div className="mark-representation acad-ic" style={{ marginBottom: '20px' }}>
+        <div className="mark-representation acad-ic" style={{ marginBottom: '20px', height: '400px', width: '500px' }} >
             <p>Mark Representation: (Test Name)</p>
             <button style={{ fontSize: '80%' }}>Compare</button>
             <BarChart
@@ -57,7 +57,7 @@ const MarkRepresentation = () => {
 
 const ProjectCompletion = () => {
     return (
-        <div className="project-completion acad-ic" style={{ height: '200px', width: '300px' }}>
+        <div className="project-completion acad-ic" style={{ height: '450px', width: '400px', padding: '50px' }}>
             <p>Project completion: </p>
             <div>
                 <SimpleGauge value={completionValue} isTotal={true} />
@@ -68,7 +68,7 @@ const ProjectCompletion = () => {
 
 const Submissions = () => {
     return (
-        <div className="submissions acad-ic">
+        <div className="submissions acad-ic" style={{ height: '400px', width: '500px' }}>
             <p>Assignments & prjects</p>
             <button style={{ fontSize: '80%' }}>Select dates</button>
             <CalendarHeatmap
@@ -82,7 +82,7 @@ const Submissions = () => {
 
 const ExtraCurricularActivites = () => {
     return (
-        <div className="extra-curricular-activities acad-ic">
+        <div className="extra-curricular-activities acad-ic" style={{ height: '400px', width: '420px' }}>
             <p>Extra curricular activites</p>
             <PieChart
             series={[

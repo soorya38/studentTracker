@@ -22,7 +22,7 @@ body {
     padding: 20px;
     max-width: 1200px;
     margin: 1vh auto 0; /* Adjust top margin for spacing */
-    background-color: #e3e3e3;
+    background-color: darkgrey;
     border-radius: 10px;
 }
 
@@ -201,4 +201,11 @@ table.timetable td:hover {
 table.timetable td:first-child {
     background-color: #e3f2fd;
     font-weight: bold;
+}
+
+.acad-ic {
+    padding: 20px;
+    justify-content: center;
+    background-color: rgba(221, 219, 219, 0.631);
+    border-radius: 7px;
 }
