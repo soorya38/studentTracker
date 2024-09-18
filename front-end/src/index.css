@@ -93,7 +93,7 @@ body {
 }
 
 .contents-panel {
-    width: 350px;
+    width: 800px;
     height: 75vh;
     border-radius: 7px;
     margin-right: 50px;
@@ -153,4 +153,15 @@ button {
 
 .project-completion {
     text-align: center;
+}
+
+.acad-ic {
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+
+.profile-details {
+    text-align: left;
+    margin-left: 100px;
 }

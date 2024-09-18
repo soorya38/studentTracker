@@ -7,6 +7,12 @@ import 'react-calendar-heatmap/dist/styles.css';
 const subjects = ['maths', 'chemistry', 'physics', 'cs', 'bio'];
 const marks = [8, 5, 9, 10, 7];
 const completionValue = 10;
+const projectSubmissionDates = {dates: [
+    { date: '2024-01-01'},
+    { date: '2024-01-22'},
+    { date: '2024-01-30'},
+    { date: '2024-03-30'},
+]};
 
 const Academics = () => {
     return (
@@ -21,7 +27,7 @@ const Academics = () => {
 
 const MarkRepresentation = () => {
     return (
-        <div className="mark-representation" style={{ marginBottom: '20px' }}>
+        <div className="mark-representation acad-ic" style={{ marginBottom: '20px' }}>
             <p>Mark Representation: (Test Name)</p>
             <button style={{ fontSize: '80%' }}>Compare</button>
             <BarChart
@@ -46,7 +52,7 @@ const MarkRepresentation = () => {
 
 const ProjectCompletion = () => {
     return (
-        <div className="project-completion" style={{ height: '200px', width: '300px' }}>
+        <div className="project-completion acad-ic" style={{ height: '200px', width: '300px' }}>
             <p>Project completion: </p>
             <div>
                 <SimpleGauge value={completionValue} isTotal={true} />
@@ -57,18 +63,13 @@ const ProjectCompletion = () => {
 
 const Submissions = () => {
     return (
-        <div className="submissions">
+        <div className="submissions acad-ic">
             <p>Assignments & prjects</p>
             <button style={{ fontSize: '80%' }}>Select dates</button>
             <CalendarHeatmap
             startDate={new Date('2023-12-31')}
             endDate={new Date('2024-04-01')}
-            values={[
-                { date: '2024-01-01', count: 1},
-                { date: '2024-01-22', count: 1},
-                { date: '2024-01-30', count: 1},
-                { date: '2024-03-30', count: 1},
-            ]}
+            values={projectSubmissionDates.dates}
             />
         </div>
     );
@@ -81,7 +82,7 @@ const PieData = [
 ];
 const ExtraCurricularActivites = () => {
     return (
-        <div className="extra-curricular-activities">
+        <div className="extra-curricular-activities acad-ic">
             <p>Extra curricular activites</p>
             <PieChart
             series={[

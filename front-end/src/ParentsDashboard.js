@@ -1,12 +1,23 @@
 import AttendacePage from './Attendance';
 import AcademicsPage from './Academics';
 
+const profileDetails = {
+    name: 'mark1',
+    globalRanking: 1,
+    classRanking: 1,
+    achievements: 'none',
+    intrests: 'none',
+    bio: 'none'
+};
+
 const ParentsDashboard = () => {
+
+
     return (
         <div class="container">
-            {/* <Attendace /> */}
-            <AcademicsPage />
-            {/* <Profile />
+            <AttendacePage />
+            {/* <AcademicsPage />
+            <Profile />
             <TimeTable />
             <Academics />
             <SideBar /> */}
@@ -18,7 +29,15 @@ const Profile = () => {
     return (
         <div class="profile">
             <div class="profile-pic"></div>
-            <p>Profile Details</p>
+            <h2 style={{textAlign: 'center'}}>Profile Details</h2>
+            <div  className='profile-details'>
+                <p>Name: {profileDetails.name}</p>
+                <p>Global ranking: {profileDetails.globalRanking}</p>
+                <p>Class ranking: {profileDetails.classRanking}</p>
+                <p>Achievements: {profileDetails.achievements}</p>
+                <p>Intrests: {profileDetails.intrests}</p>
+                <p>Bio: {profileDetails.bio}</p>
+            </div>
         </div>
     );
 }
