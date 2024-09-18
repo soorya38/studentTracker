@@ -1,8 +1,13 @@
 import { BarChart } from "@mui/x-charts";
 import { SimpleGauge } from "react-gauges";
 import { PieChart } from '@mui/x-charts/PieChart';
+import { useState } from "react";
 import CalendarHeatmap from 'react-calendar-heatmap';
 import 'react-calendar-heatmap/dist/styles.css';
+import DateTimePicker from 'react-datetime-picker';
+import 'react-datetime-picker/dist/DateTimePicker.css';
+import 'react-calendar/dist/Calendar.css';
+import 'react-clock/dist/Clock.css';
 
 const subjects = ['maths', 'chemistry', 'physics', 'cs', 'bio'];
 const marks = [8, 5, 9, 10, 7];
@@ -20,6 +25,7 @@ const PieData = [
 ];
 
 const Academics = () => {
+    
     return (
         <>
             <MarkRepresentation />
@@ -67,10 +73,14 @@ const ProjectCompletion = () => {
 }
 
 const Submissions = () => {
+    const [value, onChange] = useState(new Date());
     return (
         <div className="submissions acad-ic">
             <p>Assignments & prjects</p>
-            <button style={{ fontSize: '80%' }}>Select dates</button>
+            {/* <button style={{ fontSize: '80%' }}>Select dates</button> */}
+            <DateTimePicker onChange={onChange} value={value} />
+            <DateTimePicker onChange={onChange} value={value} /><br />
+            <br /><br />
             <CalendarHeatmap
             startDate={new Date('2023-12-31')}
             endDate={new Date('2024-04-01')}

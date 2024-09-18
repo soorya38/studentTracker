@@ -15,9 +15,9 @@ const ParentsDashboard = () => {
 
     return (
         <div class="container">
-            <AttendacePage />
-            {/* <AcademicsPage />
-            <Profile />
+            {/* <AttendacePage /> */}
+            <AcademicsPage />
+            {/* <Profile />
             <TimeTable />
             <Academics />
             <SideBar /> */}
