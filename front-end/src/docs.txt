@@ -85,3 +85,15 @@ ExtraCurricularActivites:
         ];
     components:
         PieChart
+    
+TimeTable:
+    components:
+        TimeTableItem
+    props:
+        time
+        subjects
+    data(db) -> time, subjects (editable)
+        time = '01:00 - 02:00',
+        subjects = ['phy', 'math', 'eng', 'his', 'phy']
+
+StudentDashboard

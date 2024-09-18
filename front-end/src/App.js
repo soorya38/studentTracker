@@ -1,10 +1,9 @@
 import ParentsDashboard from './ParentsDashboard';
-import Attendace from './Attendance';
-import Todo from './Todo';
+import StudentDashboard from './StudentsDashboard';
 
 const App = () => {
   return (
-    <ParentsDashboard />
+    <StudentDashboard />
   );
 }
 

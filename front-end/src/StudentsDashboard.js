@@ -12,7 +12,7 @@ const profileDetails = {
     bio: 'none'
 };
 
-const ParentsDashboard = () => {
+const StudentDashboard = () => {
     return (
         <div class="container">
             {/* <AttendacePage /> */}
@@ -28,7 +28,12 @@ const ParentsDashboard = () => {
 const Profile = () => {
     return (
         <div class="profile">
-            <div class="profile-pic"></div>
+            <div style={{display: 'grid'}}>
+                <div class="profile-pic">
+                </div>
+                <button style={{fontSize: "80%"}}>Edit</button>
+            </div>
+            <br />
             <h2 style={{textAlign: 'center'}}>Profile Details</h2>
             <div  className='profile-details'>
                 <p>Name: {profileDetails.name}</p>
@@ -91,14 +96,16 @@ const Academics = () => {
 const SideBar = () => {
     return (
         <div class="side-options">
-                <button>Teacher's Meet</button>
+                <button>Communicate</button>
                 <button>Notifications</button>
                 <button>Rewards</button>
-                <button>Attendance</button>
-                <button>Queries</button>
-                <button>Notify</button>
+                <button>View attendance</button>
+                <button>To-Do</button>
+                <button>Post assignments</button>
+                <button>Showoff</button>
+                <button>Explore</button>
             </div>
     );
 }
 
-export default ParentsDashboard;
+export default StudentDashboard;
