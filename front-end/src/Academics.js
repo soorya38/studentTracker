@@ -13,6 +13,11 @@ const projectSubmissionDates = {dates: [
     { date: '2024-01-30'},
     { date: '2024-03-30'},
 ]};
+const PieData = [
+    { id: 0, value: 10, label: 'Games' },
+    { id: 1, value: 15, label: 'Academics' },
+    { id: 2, value: 20, label: 'Travel' },
+];
 
 const Academics = () => {
     return (
@@ -75,11 +80,6 @@ const Submissions = () => {
     );
 }
 
-const PieData = [
-    { id: 0, value: 10, label: 'Games' },
-    { id: 1, value: 15, label: 'Academics' },
-    { id: 2, value: 20, label: 'Travel' },
-];
 const ExtraCurricularActivites = () => {
     return (
         <div className="extra-curricular-activities acad-ic">
