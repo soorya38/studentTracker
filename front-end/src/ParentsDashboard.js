@@ -56,48 +56,26 @@ const TimeTable = () => {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                <td>09:00 - 10:00</td>
-                <td>Math</td>
-                <td>Physics</td>
-                <td>Chemistry</td>
-                <td>Math</td>
-                <td>English</td>
-                </tr>
-                <tr>
-                <td>10:00 - 11:00</td>
-                <td>English</td>
-                <td>Math</td>
-                <td>Physics</td>
-                <td>Chemistry</td>
-                <td>History</td>
-                </tr>
-                <tr>
-                <td>11:00 - 12:00</td>
-                <td>Break</td>
-                <td>Break</td>
-                <td>Break</td>
-                <td>Break</td>
-                <td>Break</td>
-                </tr>
-                <tr>
-                <td>12:00 - 01:00</td>
-                <td>History</td>
-                <td>Chemistry</td>
-                <td>English</td>
-                <td>Physics</td>
-                <td>Math</td>
-                </tr>
-                <tr>
-                <td>01:00 - 02:00</td>
-                <td>Physics</td>
-                <td>Math</td>
-                <td>English</td>
-                <td>History</td>
-                <td>Physics</td>
-                </tr>
+                <TimeTableItem time={'11.00 - 12.00'}/>
+                <TimeTableItem />
+                <TimeTableItem />
+                <TimeTableItem />                
             </tbody>
         </table>
+    );
+}
+
+const TimeTableItem = ({
+    time = '01:00 - 02:00',
+    subjects = ['phy', 'math', 'eng', 'his', 'phy']
+}) => {
+    return (
+    <tr>
+        <td>{time}</td>
+        {subjects.map((i, index) => {
+            return <td key={index}>{i}</td>
+        })}
+    </tr>
     );
 }
 
