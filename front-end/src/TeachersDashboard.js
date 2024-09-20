@@ -87,8 +87,8 @@ const TimeTableItem = ({
 
 const Academics = () => {
     return (
-        <div class="academics">
-            <button>Academics</button>
+        <div class="academics ">
+            <button>Update time table</button>
         </div>
     );
 }

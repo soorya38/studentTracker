@@ -4,6 +4,7 @@ libraries:
     react-calendar-heatmap
     react-gauges
     react-native-horizontal-bar-graphs
+    axios
 
 ParentsDashboard:
     components:

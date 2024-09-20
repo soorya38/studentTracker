@@ -15,12 +15,12 @@ const profileDetails = {
 const StudentDashboard = () => {
     return (
         <div class="container">
-            {/* <AttendacePage /> */}
+            <AttendacePage />
             {/* <AcademicsPage /> */}
-            <Profile />
+            {/* <Profile />
             <TimeTable />
             <Academics />
-            <SideBar />
+            <SideBar /> */}
         </div>
     );
 }
