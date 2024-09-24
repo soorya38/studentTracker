@@ -15,8 +15,8 @@ const profileDetails = {
 const StudentDashboard = () => {
     return (
         <div class="container">
-            <AttendacePage />
-            {/* <AcademicsPage /> */}
+            {/* <AttendacePage /> */}
+            <AcademicsPage />
             {/* <Profile />
             <TimeTable />
             <Academics />

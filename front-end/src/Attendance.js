@@ -7,7 +7,7 @@ const Attendance = () => {
   const [absentDates, setAbsentDates] = useState([]);
 
   useEffect(() => {
-    getData().then((d) => setAbsentDates(d));
+    getData().then((date) => setAbsentDates(date));
   }, []);
 
   const setAbsentClass = useCallback(
@@ -52,7 +52,7 @@ const CalendarView = ({ setAbsentClass }) => {
 };
 
 const getData = async () => {
-  const res = await axios.get('http://localhost:3030/data');
+  const res = await axios.get('http://localhost:3030/dates');
   return res.data.map(date => new Date(date)); 
 }
 
