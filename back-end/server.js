@@ -43,6 +43,18 @@ app.use("/extra-curricular-activities", (req, res) => {
   res.json(data);
 });
 
+app.use("/profile-details", (req, res) => {
+  const profileDetails = {
+    name: "mark1",
+    globalRanking: 1,
+    classRanking: 1,
+    achievements: "none",
+    intrests: "none",
+    bio: "none",
+  };
+  res.json(profileDetails);
+});
+
 app.listen(3030, () => {
   console.log("Listening on port 3030");
 });

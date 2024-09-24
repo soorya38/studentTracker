@@ -1,31 +1,36 @@
 import AttendacePage from './Attendance';
 import AcademicsPage from './Academics';
-
 import Todo from './Todo';
-
-const profileDetails = {
-    name: 'mark1',
-    globalRanking: 1,
-    classRanking: 1,
-    achievements: 'none',
-    intrests: 'none',
-    bio: 'none'
-};
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const StudentDashboard = () => {
     return (
         <div class="container">
             {/* <AttendacePage /> */}
-            <AcademicsPage />
-            {/* <Profile />
+            {/* <AcademicsPage /> */}
+            <Profile />
             <TimeTable />
             <Academics />
-            <SideBar /> */}
+            <SideBar />
         </div>
     );
 }
 
 const Profile = () => {
+    const[profileDetails, setProfileDetails] = useState({
+        name: 'mark1',
+        globalRanking: 1,
+        classRanking: 1,
+        achievements: 'none',
+        intrests: 'none',
+        bio: 'none'
+    });
+
+    useEffect(() => {
+        getProfileDetails().then((d) => setProfileDetails(d));
+    }, []);
+
     return (
         <div class="profile">
             <div style={{display: 'grid'}}>
@@ -45,6 +50,10 @@ const Profile = () => {
             </div>
         </div>
     );
+}
+const getProfileDetails = async () => {
+    const data = await axios.get('http://localhost:3030/profile-details');
+    return data.data;
 }
 
 const TimeTable = () => {
