@@ -1,13 +1,15 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Collections = () => {
+  const navigate=useNavigate();
   return (
     <div className='flex flex-wrap justify-between items-center bg-gray-300 p-4'>
 
       <div className='bg-gray-100 w-[45%] p-4 text-center m-2'>
         <button 
-          onClick={()=>alert('meet')}>
-          MEET
+          onClick={()=>navigate('/Attendance')}>
+          ATTENDENCE
         </button>
       </div>
 
@@ -28,7 +30,7 @@ const Collections = () => {
       <div className='bg-gray-100 w-[45%] p-4 text-center m-2'> 
         <button 
           onClick={()=>alert('meet')}>
-          Rewards
+          MEET
         </button>
       </div>
 
@@ -41,7 +43,7 @@ const Collections = () => {
 
       <div className='bg-gray-100 w-[45%] p-4 text-center m-2'>
         <button  
-          onClick={()=>alert('meet')}>
+          onClick={()=>navigate('/Assingments')}>
           Post assignments
         </button>
       </div>

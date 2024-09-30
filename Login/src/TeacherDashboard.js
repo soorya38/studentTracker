@@ -18,8 +18,8 @@ function TeacherDashboard() {
     return(
       <>
         <div className="flex justify-between flex-row w-auto h-auto">
-          <div className='flex justify-start items-start mt-5 flex-col w-[30%]'>
-              <img src={profile} alt="profile" className='w-[80%] h-[70%]'/>
+          <div className='flex justify-start items-start mt-5 flex-col w-[46%]'>
+              <img src={profile} alt="profile" className='w-[60%] h-[70%]'/>
               <div className='text-justify'>
                 <h1>Details</h1>
                 <h2>NAME: </h2>
