@@ -32,14 +32,14 @@ const Assingments = () => {
         <div className='flex justify-start items-center flex-col my-5 mx-96 bg-gray-300 w-[50%] h-96'>
             {
                 work.length>0 ? (
-                    <ul className='text-lg'>
+                    <ul className='text-xl'>
                         {
                             work.map((data,id)=>( 
                                 <li key={id}>{data}</li>
                             ))
                         } 
                     </ul>
-                ):<h1>No assignments</h1>
+                ):<h1 className='text-xl'>No assignments</h1>
             }
         </div>
     </div>
